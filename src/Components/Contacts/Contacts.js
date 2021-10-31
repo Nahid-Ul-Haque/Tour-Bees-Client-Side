@@ -15,7 +15,7 @@ const Contacts = () => {
                     <h5 className='text-white'>Our Address</h5>
                     <div>
                         <FontAwesomeIcon icon={faMapMarker} style={{ color: 'red' }} />
-                        <p className='text-white'>Comfort Tower 167/B, Green Road, Dhanmondi, Dhaka, Bangladesh.</p>
+                        <p className='text-white'>Comforts Tower 167/B, Green Road, Dhanmondi, Dhaka, Bangladesh.</p>
                     </div>
                     <div>
                         <FontAwesomeIcon icon={faPhone} style={{ color: 'red' }} />
