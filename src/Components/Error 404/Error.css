@@ -1,0 +1,9 @@
+.error-section h1{
+    color: crimson;
+    font-size: 200px;
+    font-style: italic;
+}
+.error-section p{
+    color: crimson;
+    font-weight: 800;
+}

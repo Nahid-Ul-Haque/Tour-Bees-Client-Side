@@ -1,0 +1,55 @@
+.services{
+    margin-top: 30px;
+}
+.service-box{
+    margin-bottom: 30px;
+}
+.S{
+    font-size: 60px;
+    background-color: olive;
+    padding: 1px 5px;
+    margin-right: 5px;
+    color: white;
+}
+.E{
+    font-size: 60px;
+    background-color: olive;
+    padding: 1px 5px;
+    margin-right: 5px;
+    color: white;
+}
+.R{
+    font-size: 60px;
+    background-color: olive;
+    padding: 1px 5px;
+    margin-right: 5px;
+    color: white;
+}
+.V{
+    font-size: 60px;
+    background-color: olive;
+    padding: 1px 5px;
+    margin-right: 5px;
+    color: white;
+}
+.I{
+    font-size: 60px;
+    background-color: olive;
+    padding: 1px 5px;
+    margin-right: 5px;
+    color: white;
+}
+.C{
+    font-size: 60px;
+    background-color: olive;
+    padding: 1px 5px;
+    margin-right: 5px;
+    color: white;
+}
+.box{
+    margin-bottom: 30px;
+}
+.box:hover{
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.4);
+    padding: 0px 10px;
+}

@@ -1,0 +1,14 @@
+.google-btn{
+    font-weight: 700;
+    font-style: italic;
+    color: black;
+    background-color: darkorange;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 15px;
+}
+.register-section h1{
+    color:tomato;
+    font-style: italic;
+    font-weight: 600;
+}
