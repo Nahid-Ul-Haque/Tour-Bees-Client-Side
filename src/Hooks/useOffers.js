@@ -4,7 +4,7 @@ const useOffers = () => {
     const [offers, setOffers] = useState([]);
 
     useEffect(() => {
-        fetch('/offer.json')
+        fetch('https://frightful-ghoul-79837.herokuapp.com/offers')
             .then(res => res.json())
             .then(data => setOffers(data))
     }, [])
