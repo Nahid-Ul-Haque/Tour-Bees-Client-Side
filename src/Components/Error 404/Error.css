@@ -1,9 +1,27 @@
-.error-section h1{
-    color: crimson;
-    font-size: 200px;
-    font-style: italic;
-}
-.error-section p{
-    color: crimson;
-    font-weight: 800;
-}
+.error-banner {
+    background: url(../../../src/Images/error/error.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 500px;
+    background-position: center;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.356);
+    height: 500px;
+  }
+  
+  .error-btn {
+    background-color: rgb(158, 229, 247);
+    border: none;
+    padding: 10px 40px;
+    border-radius: 20px;
+    color: white;
+    margin-top: 250px;
+  }
+  
+  .error-btn:active {
+    background-color: rgb(0, 175, 219);
+    transform: scale(0.98);
+  }
+  

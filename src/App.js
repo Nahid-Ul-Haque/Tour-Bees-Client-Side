@@ -1,6 +1,7 @@
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
+import Cart from './Components/Cart/Cart';
 import AddNewOffer from './Components/Connections/Add A New Offer/AddNewOffer';
 import ManageAllOrders from './Components/Connections/Manage All Orders/ManageAllOrders';
 import MyOrders from './Components/Connections/My Orders/MyOrders';
@@ -39,11 +40,14 @@ function App() {
             <Route path='/manageorders'>
               <ManageAllOrders></ManageAllOrders>
             </Route>
-            <Route path='/addoffer'>
+            <Route path='/addoffers'>
               <AddNewOffer></AddNewOffer>
             </Route>
             <PrivateRoute path='/contacts'>
               <Contacts></Contacts>
+            </PrivateRoute>
+            <PrivateRoute path='/cart'>
+              <Cart></Cart>
             </PrivateRoute>
             <Route exact path='*'>
               <Error></Error>
