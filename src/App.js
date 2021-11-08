@@ -4,7 +4,6 @@ import './App.css';
 import Cart from './Components/Cart/Cart';
 import AddNewOffer from './Components/Connections/Add A New Offer/AddNewOffer';
 import ManageAllOrders from './Components/Connections/Manage All Orders/ManageAllOrders';
-import MyOrders from './Components/Connections/My Orders/MyOrders';
 import Contacts from './Components/Contacts/Contacts';
 import Error from './Components/Error 404/Error';
 import Home from './Components/Home/Home';
@@ -33,9 +32,6 @@ function App() {
             </PrivateRoute>
             <Route path='/register'>
               <Register></Register>
-            </Route>
-            <Route path='/myorders'>
-              <MyOrders></MyOrders>
             </Route>
             <Route path='/manageorders'>
               <ManageAllOrders></ManageAllOrders>

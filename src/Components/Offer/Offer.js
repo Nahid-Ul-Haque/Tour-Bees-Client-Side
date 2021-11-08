@@ -15,18 +15,9 @@ const Offer = (props) => {
                         <Card.Text className='text-black'>
                             {description.slice(0, 100)}
                         </Card.Text>
-                        <div className="row">
-                            <div className='col-6'>
-                                <Link to={`/details/${key}`}>
-                                    <button className='offer-btn'>Click More</button>
-                                </Link>
-                            </div>
-                            <div className='col-6'>
-                                <Link to='/cart' >
-                                    <button className="offer-btn" type="button">Going?</button>
-                                </Link>
-                            </div>
-                        </div>
+                        <Link to={`/details/${key}`}>
+                            <button className='offer-btn'>Click More</button>
+                        </Link>
                     </Card.Body>
                 </Card>
             </Col>

@@ -25,7 +25,6 @@ const Header = () => {
                     {
                         user?.email ?
                             <>
-                                <Nav.Link as={HashLink} to="/myorders">My Orders</Nav.Link>
                                 <Nav.Link as={HashLink} to="/manageorders">Manage All Orders</Nav.Link>
                                 <Nav.Link as={HashLink} to="/addoffers">Add A New Service</Nav.Link>
                             </> :
@@ -39,7 +38,7 @@ const Header = () => {
                     }
                     {/* <Nav.Link as={HashLink} to ="/register">Login</Nav.Link> */}
                     <Navbar.Text>
-                        <a style={{ textDecoration: 'none', color: 'black' }} href="#login">sign in as:{user?.displayName}</a>
+                        <a style={{ textDecoration: 'none', color: 'black' }} href="#login">Name: {user?.displayName}</a>
                     </Navbar.Text>
                 </Navbar.Collapse>
             </Container>

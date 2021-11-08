@@ -1,47 +1,51 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 
 const ManageAllOrders = () => {
-    const [users, setusers] = useState([])
+    const [manage, setManage] = useState([])
+    const [isDeleted, setIsDeleted] = useState(false)
+
     useEffect(() => {
         fetch('https://frightful-ghoul-79837.herokuapp.com/offers')
             .then(res => res.json())
-            .then(data => setusers(data))
-    }, [])
+            .then(data => setManage(data))
+    }, [isDeleted])
 
-    //Delete an User
-    const handleDeleteUser = id => {
-        const proceed = window.confirm('Are you sure, you want to delete??');
-        if (proceed) {
-            const url = `http://localhost:5000/deletedOffers/${id}`
-            fetch(url, {
-                method: 'DELETE'
+    const handleDelete = id => {
+        const url = `https://frightful-ghoul-79837.herokuapp.com/deletedOffers/${id}`
+        fetch(url, {
+            method: 'DELETE',
+            headers: { 'content-type': 'application/json' }
+        })
+            .then(res => res.json())
+            .then(data => {
+
+                if (data) {
+                    window.confirm('Are you sure to delete this Service ?')
+                    setIsDeleted(data)
+                }
             })
-
-                .then(res => res.json())
-                .then(data => {
-                    if (data.deletedCount > 0) {
-                        alert('deletd successfully');
-                        const remainingUser = users.filter(user => user._id !== id)
-                        setusers(remainingUser);
-                    }
-                })
-        }
     }
     return (
-        <div>
-            <h2>Users Available : {users.length}</h2>
-            <ul>
+        <div className='container margin-adjust'>
+            <div className="row row-cols-1 row-cols-md-3 g-4">
                 {
-                    users.map(user => <li
-                        key={user._id}
-                    >
-                        {user.name} :: {user.email}
-                        <Link to={`/users/update/${user._id}`}> <button>Update</button> </Link>
-                        <button onClick={() => handleDeleteUser(user._id)}>X</button>
-                    </li>)
+                    manage.map(pd =>
+                        <div key={pd._id} className="col">
+                            <div className="card h-100">
+                                <img src={pd.img} className="card-img-top img-fluid p-4" alt="..." />
+                                <div className="card-body">
+                                    <h5 className="card-title text-center">{pd.name}</h5>
+                                    <div className="button-style">
+                                        <div className="d-grid gap-2 ">
+                                            <button onClick={() => handleDelete(pd._id)} className="btn btn-design" type="button">Delete</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>)
                 }
-            </ul>
+            </div>
         </div>
     );
 };
